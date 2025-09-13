@@ -1,0 +1,42 @@
+/* General Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+
+body { background: #fff; color: #333; line-height: 1.6; }
+
+/* Navbar */
+.navbar { display: flex; justify-content: space-between; align-items: center; background: purple; color: white; padding: 1rem 2rem; }
+.logo { font-size: 1.5rem; font-weight: bold; }
+.nav-links { display: flex; gap: 1.5rem; }
+.nav-links a { color: white; text-decoration: none; font-weight: 500; }
+.hamburger { display: none; font-size: 1.5rem; background: none; border: none; color: white; cursor: pointer; }
+
+/* Mobile Navbar */
+@media (max-width: 768px) {
+  .nav-links { display: none; flex-direction: column; gap: 1rem; position: absolute; top: 60px; right: 20px; background: purple; padding: 1rem; border-radius: 8px; }
+  .nav-links.active { display: flex; }
+  .hamburger { display: block; }
+}
+
+/* Hero */
+.hero { text-align: center; padding: 4rem 2rem; background: #f3e5f5; }
+.hero h1 { font-size: 2.5rem; margin-bottom: 1rem; color: purple; }
+.hero p { font-size: 1.2rem; margin-bottom: 1.5rem; }
+.cta-btn { padding: 0.8rem 2rem; background: purple; color: white; border: none; border-radius: 5px; cursor: pointer; }
+
+/* Products */
+.products { padding: 2rem; text-align: center; }
+.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+.product-card { background: #fafafa; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); }
+.product-card img { width: 100%; border-radius: 5px; margin-bottom: 0.5rem; }
+
+/* Dashboard */
+.dashboard { padding: 2rem; max-width: 600px; margin: auto; }
+.dashboard form { display: flex; flex-direction: column; gap: 10px; }
+.dashboard input, .dashboard select, .dashboard button { padding: 10px; border: 1px solid #ccc; border-radius: 6px; }
+.dashboard button { background: purple; color: white; border: none; cursor: pointer; }
+
+/* Auth Pages */
+.auth { max-width: 400px; margin: 2rem auto; text-align: center; }
+.auth form { display: flex; flex-direction: column; gap: 15px; }
+.auth input, .auth button { padding: 10px; border-radius: 6px; }
+.auth button { background: purple; color: white; border: none; cursor: pointer; }
