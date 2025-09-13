@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seller Dashboard - KwachaConnect</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">KwachaConnect</div>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="buyer.html">Buyer Dashboard</a>
+      <a href="seller.html">Seller Dashboard</a>
+      <a href="login.html">Login</a>
+    </nav>
+    <button class="hamburger" id="hamburger">☰</button>
+  </header>
+
+  <main class="dashboard">
+    <h2>Seller Dashboard</h2>
+    <form id="addProductForm">
+      <input type="text" id="productName" placeholder="Product name" required />
+      <input type="number" id="productPrice" placeholder="Price (MWK)" required />
+      <input type="text" id="productDistrict" placeholder="District" required />
+      <select id="productCategory">
+        <option value="Electronics">Electronics</option>
+        <option value="Fashion">Fashion</option>
+        <option value="Home">Home</option>
+        <option value="Grocery">Grocery</option>
+      </select>
+      <button type="submit">Add Product</button>
+    </form>
+
+    <h3>My Products</h3>
+    <ul id="myProducts"></ul>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

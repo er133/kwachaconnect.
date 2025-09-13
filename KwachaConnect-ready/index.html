@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KwachaConnect — Malawi Marketplace</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header class="nav">
+    <a class="brand" href="index.html">
+      <svg class="logo" viewBox="0 0 100 24" aria-hidden="true">
+        <rect x="0" y="10" width="18" height="4" rx="2"></rect>
+        <rect x="22" y="10" width="18" height="4" rx="2"></rect>
+        <rect x="44" y="10" width="18" height="4" rx="2"></rect>
+      </svg>
+      <span>KwachaConnect</span>
+    </a>
+    <nav class="links">
+      <a href="index.html" class="active">Home</a>
+      <a href="seller.html">Seller Dashboard</a>
+      <a href="buyer.html">Buyer Dashboard</a>
+      <a href="#" id="openSettings">Settings</a>
+    </nav>
+  </header>
+
+  <!-- Hero / Search -->
+  <section class="hero">
+    <h1>Buy & Sell in Malawi</h1>
+    <p class="sub">Find great deals across Lilongwe, Blantyre, Mzuzu, Zomba & more. Prices in <b>MWK</b>.</p>
+    <div class="searchbar">
+      <input id="q" type="text" placeholder="Search products or district… e.g. phone, maize, Lilongwe">
+      <button id="searchBtn">Search</button>
+    </div>
+    <div class="chips" id="chips">
+      <button data-cat="all" class="chip active">All</button>
+      <button data-cat="electronics" class="chip">Electronics</button>
+      <button data-cat="fashion" class="chip">Fashion</button>
+      <button data-cat="home" class="chip">Home</button>
+      <button data-cat="grocery" class="chip">Grocery</button>
+    </div>
+  </section>
+
+  <!-- Products Grid -->
+  <main class="container">
+    <div id="grid" class="grid"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div>© 2025 KwachaConnect · Malawi Marketplace</div>
+  </footer>
+
+  <!-- Settings Modal -->
+  <dialog id="settingsModal">
+    <form method="dialog" class="modal">
+      <h3>Settings</h3>
+      <label class="row"><span>Default meeting option</span>
+        <select id="defaultOption">
+          <option value="meet">Meet in Person</option>
+          <option value="delivery">Delivery</option>
+        </select>
+      </label>
+      <menu>
+        <button value="cancel" class="btn-outline">Close</button>
+        <button id="saveSettings" class="btn">Save</button>
+      </menu>
+    </form>
+  </dialog>
+</body>
+</html>
